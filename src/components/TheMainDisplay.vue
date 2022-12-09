@@ -1,9 +1,14 @@
 <script>
+    import { store, fetchMessages } from '../store';
     export default{
         data(){
             return{
-
+                store,
             }
+        },
+
+        created(){
+            fetchMessages();
         }
     }
 </script>

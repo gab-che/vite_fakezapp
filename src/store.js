@@ -21,8 +21,8 @@ export function fetchUser() {
 };
 
 export function fetchMessages() {
-    // axios.get('https://jsonplaceholder.typicode.com/comments')
-    //     .then((resp) => {
-    //         console.log(resp);
-    //     })
+    axios.get('https://jsonplaceholder.typicode.com/comments')
+        .then((resp) => {
+            store.messagesList = resp.data
+        })
 };
