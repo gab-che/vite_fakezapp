@@ -1,0 +1,9 @@
+@mixin flex_col {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex_grow {
+    flex-grow: 1;
+    overflow: auto;
+}

@@ -1,2 +1,8 @@
 @use './partials/variables' as *;
 @import 'bootstrap/scss/bootstrap';
+
+body{
+    height: 100vh;
+    background-image: linear-gradient($color_bg_accent 20%, $color_bg_primary 20%);
+    padding-block: 3rem;
+}
