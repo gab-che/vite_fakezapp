@@ -4,10 +4,11 @@ import TheMainDisplay from './TheMainDisplay.vue';
 import TheBottomDisplay from './TheBottomDisplay.vue';
 
     export default{
+    components: { TheTopDisplay, TheMainDisplay, TheBottomDisplay },
+    
     data() {
         return {};
     },
-    components: { TheTopDisplay, TheMainDisplay, TheBottomDisplay }
 }
 </script>
 

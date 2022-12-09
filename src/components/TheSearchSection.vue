@@ -1,15 +1,18 @@
 <script>
-    export default{
-        data(){
-            return{
+    import TheSearchBar from './TheSearchBar.vue';
+    import UserList from './UserList.vue';
 
-            }
-        }
-    }
+    export default{
+    components: { TheSearchBar, UserList },
+    data() {
+        return {};
+    },
+}
 </script>
 
 <template>
-
+    <TheSearchBar></TheSearchBar>
+    <UserList></UserList>
 </template>
 
 <style scoped lang="scss">
