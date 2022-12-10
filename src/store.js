@@ -2,21 +2,19 @@ import { reactive } from 'vue';
 import axios from 'axios';
 
 export const store = reactive({
-    temporaryUserList: [],
     userList: [],
     messagesList: [],
-    counter: 5,
+    counter: 10,
 });
 
-export function fetchUser() {
-    axios.get('https://randomuser.me/api/')
+export function fetchUsers() {
+    axios.get('https://randomuser.me/api/', {
+        params: {
+            results: store.counter,
+        }
+    })
         .then((resp) => {
-            store.temporaryUserList.push(resp.data.results);
-            store.counter--;
-
-            if (store.counter === 0) {
-                store.userList = store.temporaryUserList;
-            }
+            store.userList = resp.data.results;
         })
 };
 
