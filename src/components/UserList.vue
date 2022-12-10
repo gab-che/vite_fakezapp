@@ -12,15 +12,15 @@
     },
 
     created(){
-        this.fetchUsers();
+        //this.fetchUsers();
     },
 
     methods: {
         fetchUsers() {
             for (let i = 0; i < store.counter; i++) {
-            fetchUser();
-    }
-}
+                fetchUser();
+            }
+        }
     }
 }
 </script>

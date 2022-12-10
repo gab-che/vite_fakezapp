@@ -1,3 +1,5 @@
+@use '_variables.scss' as *;
+
 @mixin flex_col {
     display: flex;
     flex-direction: column;
@@ -6,4 +8,31 @@
 @mixin flex_grow {
     flex-grow: 1;
     overflow: auto;
+}
+
+@mixin flex_just_between {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin flex_align_center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin round_icon {
+    height: 40px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+@mixin main_text{
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+@mixin sub_text{
+    font-size: .7rem;
+    color: $color_nav_accent;
 }

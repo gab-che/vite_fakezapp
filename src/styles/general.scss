@@ -1,8 +1,23 @@
 @use './partials/variables' as *;
+@use './partials/utilities' as *;
+@use "@fortawesome/fontawesome-free/css/all.min.css";
 @import 'bootstrap/scss/bootstrap';
 
 body{
     height: 100vh;
     background-image: linear-gradient($color_bg_accent 20%, $color_bg_primary 20%);
     padding-block: 3rem;
+}
+
+a{
+    font-size: .7rem;
+}
+
+.button_list{
+    margin-bottom: 0;
+
+    button{
+        border: none;
+        color: $color_nav_accent;
+    }
 }
