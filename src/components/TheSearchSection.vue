@@ -1,17 +1,27 @@
 <script>
     import TheSearchBar from './TheSearchBar.vue';
     import UserList from './UserList.vue';
-
+    import { store, fetchUsers } from '../store';
     export default{
     components: { TheSearchBar, UserList },
     data() {
-        return {};
+        return {
+            store,
+        };
+    },
+
+    methods: {
+        onSearch(input){
+            this.store.searchNames = input;
+            // fetchUsers();
+            console.log(input);
+        },
     },
 }
 </script>
 
 <template>
-    <TheSearchBar></TheSearchBar>
+    <TheSearchBar @search="onSearch"></TheSearchBar>
     <UserList></UserList>
 </template>
 

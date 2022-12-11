@@ -5,12 +5,14 @@ export const store = reactive({
     userList: [],
     messagesList: [],
     counter: 10,
+    searchNames: '',
 });
 
 export function fetchUsers() {
     axios.get('https://randomuser.me/api/', {
         params: {
             results: store.counter,
+            search: store.searchNames,
         }
     })
         .then((resp) => {
